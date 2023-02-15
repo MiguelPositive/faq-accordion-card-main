@@ -1,0 +1,303 @@
+@font-face {
+  src: url("./fonts/KumbhSans-Light.ttf");
+  font-family: "Kumbh";
+  font-display: swap;
+}
+
+@font-face {
+  src: url("./fonts/KumbhSans-Bold.ttf");
+  font-family: "KumbhBold";
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Kumbh";
+  font-size: calc(0.6vw + 0.5em);
+}
+
+body {
+  margin: 0;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-image: linear-gradient(#b067eb, #695fe2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: calc(2vw + 0.5em);
+}
+
+hr {
+  width: 100%;
+}
+
+p {
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  font-family: "KumbhBold";
+}
+
+.container {
+  overflow: hidden;
+
+  width: clamp(65vw, 85vw, 75vw);
+  border-radius: clamp(1vw, 2.5vw, 1.5vw);
+  padding: clamp(4vw, 6.5vw, 5vw);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+
+  background-color: white;
+}
+
+.card-images {
+  position: relative;
+}
+
+.card-text {
+  padding-right: clamp(2vw, 4vw, 3vw);
+}
+
+.woman-image {
+  position: absolute;
+
+  width: calc(15.5em + 15.5vw);
+  height: calc(12em + 11.5vw);
+
+  top: 4rem;
+  left: -8.5rem;
+
+  background-image: url("./images/illustration-woman-online-desktop.svg");
+  background-size: contain;
+
+  z-index: 1;
+}
+
+.shadow-image {
+  position: absolute;
+
+  top: -12rem;
+  left: -22.5rem;
+
+  width: calc(25em + 25vw);
+  height: calc(25em + 25vw);
+
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-size: contain;
+
+  z-index: 0;
+}
+
+.arrow {
+  width: clamp(0.7vw, 2.7vw, 1.7vw);
+  height: clamp(0.2vw, 2.2vw, 1.2vw);
+
+  background-image: url("./images/icon-arrow-down.svg");
+  background-size: contain;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+
+  top: clamp(14vw, 26vw, 19vw);
+  left: -8rem;
+
+  width: clamp(12vw, 16vw, 14vw);
+  height: clamp(12vw, 16vw, 14vw);
+
+  background-image: url("./images/illustration-box-desktop.svg");
+  background-size: cover;
+
+  z-index: 2;
+}
+
+.card-text div {
+  margin-bottom: clamp(1vw, 3vw, 2vw);
+}
+
+.card-text p:hover,
+.card-text h2:hover,
+.card-text div:hover {
+  cursor: pointer;
+}
+
+#response-1,
+#response-2,
+#response-3,
+#response-4,
+#response-5 {
+  color: gray;
+
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  main::after {
+    top: clamp(14.5vw, 26.5vw, 19.5vw);
+    left: -7rem;
+  }
+
+  .woman-image {
+    top: 4rem;
+    left: -7rem;
+  }
+
+  .shadow-image {
+    top: -9rem;
+  }
+}
+
+@media (max-width: 1030px) {
+  .shadow-image {
+    top: -8rem;
+    left: -19rem;
+  }
+}
+
+@media (max-width: 900px) {
+  * {
+    font-size: calc(1.3vw + 0.5em);
+  }
+
+  h1 {
+    font-size: calc(2.5vw + 0.5em);
+
+    margin-top: 6rem;
+    text-align: center;
+  }
+
+  main {
+    padding-top: 12em;
+    padding-bottom: 3em;
+  }
+  hr {
+    margin-bottom: clamp(3vw, 5vw, 4vw);
+  }
+
+  .container {
+    overflow: visible;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    padding-top: 7em;
+  }
+
+  .woman-image {
+    top: -16.5em;
+    left: 1.5em;
+  }
+
+  .shadow-image {
+    top: -17em;
+    left: 1.5em;
+
+    width: calc(15em + 15vw);
+    height: calc(15em + 15vw);
+  }
+
+  .arrow {
+    width: clamp(2.5vw, 4.5vw, 3vw);
+    height: clamp(1vw, 2.5vw, 2vw);
+  }
+
+  main::after {
+    top: 10em;
+    left: 3em;
+  }
+}
+
+@media (max-width: 700px) {
+  * {
+    font-size: calc(1.5vw + 0.5em);
+  }
+
+  h1 {
+    font-size: calc(2.6vw + 0.5em);
+  }
+
+  .woman-image {
+    top: -16.5em;
+    left: 0.5em;
+  }
+
+  .shadow-image {
+    top: -17em;
+    left: 0.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: calc(1.6vw + 0.5em);
+  }
+
+  h1 {
+    font-size: calc(2.8vw + 0.5em);
+  }
+
+  hr {
+    margin-bottom: clamp(3.5vw, 5.5vw, 4.5vw);
+  }
+
+  .container {
+    width: clamp(75vw, 95vw, 85vw);
+  }
+
+  .card-text {
+    padding: 0;
+  }
+
+  .woman-image {
+    left: 1.5em;
+  }
+
+  .shadow-image {
+    left: 1.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  * {
+    font-size: calc(1.9vw + 0.5em);
+  }
+
+  h1 {
+    font-size: calc(4.5vw + 0.5em);
+  }
+
+  .woman-image {
+    top: -16em;
+    left: 0.2em;
+  }
+
+  .shadow-image {
+    top: -16em;
+    left: 0.2em;
+  }
+}
