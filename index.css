@@ -146,6 +146,10 @@ main::after {
   cursor: pointer;
 }
 
+#card {
+  transition: 0.4s all;
+}
+
 #response-1,
 #response-2,
 #response-3,
@@ -206,6 +210,8 @@ main::after {
     grid-template-rows: auto;
 
     padding-top: 7em;
+
+    transition: none;
   }
 
   .woman-image {

@@ -12,21 +12,11 @@ const arrow5 = document.getElementById("arrow-5");
 
 const card = document.getElementById("card");
 
-const currentHeight = card.offsetHeight;
-
 let showResponse1 = false;
 let showResponse2 = false;
 let showResponse3 = false;
 let showResponse4 = false;
 let showResponse5 = false;
-
-const handleResizeHeight = () => {
-  let newHeight = card.offsetHeight;
-
-  if (currentHeight != newHeight) {
-    card.style.cssText = "transition: 0.3s";
-  }
-};
 
 const handleClickShowResponse = (e) => {
   switch (true) {
@@ -40,6 +30,8 @@ const handleClickShowResponse = (e) => {
         arrow1.style.cssText =
           "transition: 0.4s ease all; transform: rotate(180deg)";
       } else {
+        card.style.cssText = "transition: 0.3s";
+
         response1.style.cssText = "display: none";
         arrow1.style.cssText =
           "transition: 0.4s ease all; transform: rotate(0deg)";
