@@ -4,11 +4,27 @@
 
 body {
   margin: 0;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(#af68ea, #6663e8);
 }
 
-section {
-  background-color: black;
-  color: white;
+main {
+  background-color: white;
+
+  width: clamp(50vw, 65vw, 60vw);
+  /* borde pendiente */
+  border-radius: clamp(2rem, 4rem, 3rem);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1;
 }
 
 details {
@@ -18,5 +34,5 @@ details {
 
 details[open] {
   transition: 0.2s all;
-  height: 5rem;
+  height: 8rem;
 }

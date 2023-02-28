@@ -1,14 +1,14 @@
-const detalles = document.querySelectorAll("details");
+const details = document.querySelectorAll("details");
 
 // Agregar un evento de clic a cada elemento `details`
-detalles.forEach(function (detalle) {
-  detalle.addEventListener("click", function () {
+details.forEach(function (detail) {
+  detail.addEventListener("click", function () {
     // Cerrar cualquier otro elemento `details` que esté abierto
 
-    detalle.parentElement
+    detail.parentElement
       .querySelectorAll("details[open]")
       .forEach(function (openDetails) {
-        if (openDetails !== detalle) {
+        if (openDetails !== detail) {
           openDetails.removeAttribute("open");
         }
       });
