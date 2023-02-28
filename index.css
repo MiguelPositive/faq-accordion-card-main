@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  background-color: black;
+  color: white;
+}
+
+details {
+  transition: 0.2s all;
+  height: 1rem;
+}
+
+details[open] {
+  transition: 0.2s all;
+  height: 5rem;
+}
