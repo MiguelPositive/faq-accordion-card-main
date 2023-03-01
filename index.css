@@ -1,5 +1,19 @@
+@font-face {
+  font-family: "Kumbh";
+  src: url("./fonts/KumbhSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "KumbhBold";
+  src: url("./fonts/KumbhSans-Bold.ttf");
+}
+
 * {
   box-sizing: border-box;
+  font-family: "Kumbh";
+
+  font-size: calc(0.63vw + 0.5em);
+  text-align: justify;
 }
 
 body {
@@ -17,22 +31,70 @@ body {
 
 main {
   background-color: white;
+  overflow: hidden;
 
-  width: clamp(50vw, 65vw, 60vw);
-  /* borde pendiente */
-  border-radius: clamp(2rem, 4rem, 3rem);
+  width: clamp(55vw, 70vw, 65vw);
+  height: clamp(25vw, 45vw, 35vw);
+
+  border-radius: clamp(0.5rem, 1.5rem, 1rem);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1;
 }
 
+section {
+  padding: clamp(1rem, 2rem, 1.5rem);
+}
+
+summary {
+  list-style: none;
+  margin-top: clamp(0.6rem, 1rem, 0.8rem);
+
+  font-weight: bold;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr,
+h1 {
+  margin: 0;
+}
+
 details {
   transition: 0.2s all;
-  height: 1rem;
+  height: clamp(3.5vw, 6.7vw, 4.7vw);
+
+  color: gray;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 details[open] {
   transition: 0.2s all;
   height: 8rem;
+}
+
+h1 {
+  font-family: "KumbhBold";
+  font-size: clamp(1.5rem, 2.5rem, 2rem);
+}
+
+strong {
+  color: black;
+  font-family: "KumbhBold";
+}
+
+.logo-image {
+  background-image: url("./images/illustration-woman-online-desktop.svg");
+}
+
+.arrow {
+  width: calc(0.5em + 1vw);
+  height: calc(0.5em + 0.6vw);
+
+  background-image: url("./images/icon-arrow-down.svg");
+  background-size: cover;
 }
